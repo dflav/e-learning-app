@@ -1,5 +1,12 @@
-function App() {
-  return <div className='App'></div>
+import React from 'react'
+import Sidebar from './components/Sidebar/Sidebar'
+
+const App = () => {
+  return (
+    <>
+      <Sidebar />
+    </>
+  )
 }
 
 export default App
