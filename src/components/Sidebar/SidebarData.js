@@ -10,11 +10,11 @@ const SidebarData = [
   {
     id: 1,
     title: 'Μαθήματα',
-    path: '/lessons',
+    path: '#',
     icon: <BiBookBookmark />,
-    iconClosed: <RiArrowDownSLine />,
-    iconOpen: <RiArrowUpSLine />,
-    dropdown: [
+    dropdownClose: <RiArrowDownSLine />,
+    dropdownOpen: <RiArrowUpSLine />,
+    subNav: [
       { id: 2, title: 'Κεφάλαιο 1', path: '/lessons/IT1', icon: <IoIosPaper /> },
       { id: 3, title: 'Κεφάλαιο 2', path: '/lessons/IT2', icon: <IoIosPaper /> },
       { id: 4, title: 'Κεφάλαιο 3', path: '/lessons/IT3', icon: <IoIosPaper /> },
@@ -24,11 +24,11 @@ const SidebarData = [
   {
     id: 6,
     title: 'Quiz',
-    path: '/quiz',
+    path: '#',
     icon: <HiOutlinePencilAlt />,
-    iconClosed: <RiArrowDownSLine />,
-    iconOpen: <RiArrowUpSLine />,
-    dropdown: [
+    dropdownClose: <RiArrowDownSLine />,
+    dropdownOpen: <RiArrowUpSLine />,
+    subNav: [
       { id: 7, title: 'Κεφάλαιο 1', path: '/quiz/IT1', icon: <HiOutlinePencilAlt /> },
       { id: 8, title: 'Κεφάλαιο 2', path: '/quiz/IT2', icon: <HiOutlinePencilAlt /> },
       { id: 9, title: 'Κεφάλαιο 3', path: '/quiz/IT3', icon: <HiOutlinePencilAlt /> },

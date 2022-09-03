@@ -1,0 +1,50 @@
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  height: 50px;
+  font-size: 23px;
+}
+
+.link-name {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.link {
+  list-style: none;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.link:hover {
+  cursor: pointer;
+  background: #252831;
+  border-left: 4px solid #632ce4;
+}
+
+.sub-link {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  transition: all 300ms ease;
+  background: #414757;
+}
+
+.sub-link:hover {
+  background: #632ce4;
+  cursor: pointer;
+}
+
+.sub-link a {
+  padding: 7px 0;
+  font-size: 17px;
+}

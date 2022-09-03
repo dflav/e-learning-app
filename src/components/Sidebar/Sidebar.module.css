@@ -8,13 +8,13 @@
   top: 0;
   width: 100%;
   height: 60px;
-  z-index: 2;
+  z-index: 5;
 }
 
 .nav-icon {
   margin-left: 2rem;
   margin-right: 1.3rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
   height: 60px;
   display: flex;
   justify-content: flex-start;
@@ -35,15 +35,36 @@
 .sidebar {
   background-color: #15171c;
   color: #e1e9fc;
-  width: 250px;
+  width: 260px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 10;
   transition: all 350ms ease;
 }
 
 .sidebar.hidden {
   left: -100%;
+}
+
+.sidebar .nav-links {
+  height: 100%;
+  padding-top: 30px;
+}
+
+.sidebar .nav-links li {
+  list-style: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e1e9fc;
+}
+
+.sidebar .nav-links li a span {
+  width: 106px;
 }
