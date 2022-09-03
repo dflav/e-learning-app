@@ -33,7 +33,7 @@ const SidebarData = [
       { id: 8, title: 'Κεφάλαιο 2', path: '/quiz/IT2', icon: <HiOutlinePencilAlt /> },
       { id: 9, title: 'Κεφάλαιο 3', path: '/quiz/IT3', icon: <HiOutlinePencilAlt /> },
       { id: 10, title: 'Κεφάλαιο 4', path: '/quiz/IT4', icon: <HiOutlinePencilAlt /> },
-      { id: 11, title: 'Επαναληπτικό', path: '/quiz/rivision', icon: <HiOutlinePencilAlt /> },
+      { id: 11, title: 'Επαναληπτικό', path: '/quiz/rev', icon: <HiOutlinePencilAlt /> },
     ],
   },
   { id: 12, title: 'Προφίλ', path: '/profile', icon: <CgProfile /> },
