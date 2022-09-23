@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Profiler } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar'
 import Home from './Pages/Home'
 import Lesson from './Pages/Lesson'
+import Manual from './Pages/Manual'
+import Profile from './Pages/Profile'
 import Quiz from './Pages/Quiz'
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
         <Route path='/quiz/IT3' element={<Quiz id={'IT3'} />} />
         <Route path='/quiz/IT4' element={<Quiz id={'IT4'} />} />
         <Route path='/quiz/rev' element={<Quiz id={'rev'} />} />
+        <Route path='/profile' elemet={<Profile />} />
+        <Route path='/guide' element={<Manual />} />
       </Routes>
     </>
   )
