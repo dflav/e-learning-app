@@ -2,12 +2,17 @@ import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './SidebarLinks.module.css'
 
-const DropdownLinks = ({ item }) =>
+const DropdownLinks = ({ item, showDropdown }) =>
   item.subNav.map(item => (
     <li className={styles['sub-link']} key={item.id}>
-      <Link to={item.path}>{item.title}</Link>
+      <Link to={item.path} onClick={showDropdown}>
+        {item.title}
+      </Link>
     </li>
   ))
+
+const NavLink = ({ item, children }) =>
+  item.subNav ? <div className={styles.subMenu}>{children}</div> : <Link to={item.path}>{children}</Link>
 
 const SidebarLinks = ({ item }) => {
   const [dropdown, setDropdown] = useState(false)
@@ -18,16 +23,16 @@ const SidebarLinks = ({ item }) => {
     <>
       <li className={styles.link} onClick={item.subNav && showDropdown}>
         <div className={item.subNav && styles.dropdown}>
-          <Link to={item.path}>
+          <NavLink item={item}>
             <div className={styles['link-icon']}>{item.icon}</div>
             <span className={styles['link-name']}>{item.title}</span>
-          </Link>
+          </NavLink>
           {item.subNav && (
             <div className={styles['link-icon']}>{dropdown ? item.dropdownOpen : item.dropdownClose}</div>
           )}
         </div>
       </li>
-      {item.subNav && dropdown && <DropdownLinks item={item} />}
+      {item.subNav && dropdown && <DropdownLinks item={item} showDropdown={showDropdown} />}
     </>
   )
 }

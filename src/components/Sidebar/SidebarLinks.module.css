@@ -45,6 +45,17 @@
 }
 
 .sub-link a {
-  padding: 7px 0;
+  padding: 7px 65px;
   font-size: 17px;
+}
+
+.subMenu {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e1e9fc;
+}
+
+.subMenu span {
+  width: 106px;
 }
