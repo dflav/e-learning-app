@@ -1,6 +1,7 @@
 .container {
   max-width: 1020px;
-  margin: 60px auto;
+  /* margin: 60px auto; */
+  margin: 30px auto;
   border-radius: 12px;
   background: #c8e2e3;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -9,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   color: #15171c;
-  min-height: 500px;
 }
 
 .pdf {
@@ -21,8 +21,6 @@
 
 .container h1 {
   font-size: 40px;
-  /* margin-bottom: 50px;
-  margin-top: 20px; */
   margin: 50px 0;
 }
 
@@ -68,10 +66,3 @@
   width: 1rem;
   height: 1rem;
 }
-
-/* .arrows {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 30px;
-} */

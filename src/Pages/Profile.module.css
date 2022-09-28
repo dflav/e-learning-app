@@ -24,3 +24,22 @@
   text-align: center;
   line-height: 33px;
 }
+
+.form_container {
+  background: #678cd2;
+  max-width: 620px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  color: #15171c;
+  min-height: 500px;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}

@@ -1,14 +1,11 @@
 import React from 'react'
 import styles from './Lesson.module.css'
-import pdf5 from '../Pdfs/presentation5.pdf'
-import pdf6 from '../Pdfs/presentation6.pdf'
-import pdf7 from '../Pdfs/presentation7.pdf'
-import pdf8 from '../Pdfs/presentation8.pdf'
-import Pdf from '../components/Pdf'
+import pdfs from '../components/Pdf/PdfData'
+import Pdf from '../components/Pdf/Pdf'
+import { Link } from 'react-router-dom'
+import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
 
 const Lesson = ({ id }) => {
-  const pdf = [pdf5, pdf6, pdf7, pdf8]
-
   return (
     <div className={styles.container}>
       <section>
@@ -23,7 +20,19 @@ const Lesson = ({ id }) => {
           Κεφάλαια 5 - 8
         </p>
       </section>
-      <Pdf pdf={pdf[id - 1]} id={id} />
+      <div className={styles.navigation}>
+        {id !== 1 && (
+          <Link to={`/lessons/IT${id - 1}`} className={styles.btn}>
+            <MdArrowBackIos className={styles.center} />
+          </Link>
+        )}
+        {id !== 4 && (
+          <Link to={`/lessons/IT${id + 1}`} className={styles.btn}>
+            <MdArrowForwardIos />
+          </Link>
+        )}
+      </div>
+      <Pdf pdf={pdfs[id - 1].pdf} info={pdfs[id - 1].info} id={id} />
     </div>
   )
 }

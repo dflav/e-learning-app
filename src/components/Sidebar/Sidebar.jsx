@@ -16,7 +16,6 @@ const Sidebar = () => {
 
   useEffect(() => {
     closeSidebar()
-    console.log('useEffect')
   }, [location])
 
   const SidebarMenu = SidebarData.map(item => <SidebarLinks item={item} key={item.id} />)
