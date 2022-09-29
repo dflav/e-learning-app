@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   background: #5070e2;
-  height: 100%;
   margin-top: 60px;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 60px;
 }
 
 .header {
@@ -20,7 +21,7 @@
   grid-template-rows: 400px 400px;
   column-gap: 100px;
   row-gap: 100px;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
 }
 
 .grid-container img {

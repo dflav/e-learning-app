@@ -14,7 +14,7 @@ const Pdf = props => {
         PDF
       </button>
       {!pdf && <p className={styles.info}>{props.info}</p>}
-      {pdf && <embed src={props.pdf} type='application/pdf' className={styles.pdf} />}
+      {pdf && <object data={props.pdf} type='application/pdf' className={styles.pdf} />}
       <div className={styles.form}>
         <input id='checkbox' type='checkbox' className={styles.checkbox} />
         <label htmlFor='checkbox'> Διάβασα το κεφάλαιο!</label>

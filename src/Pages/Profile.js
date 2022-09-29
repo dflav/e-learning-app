@@ -46,22 +46,24 @@ const Profile = () => {
           </div>
 
           <div>
-            <span>Βαθμός Quiz 1 : </span>
-          </div>
-          <div>
-            <span>Βαθμός Quiz 2 : </span>
-          </div>
-          <div>
-            <span>Βαθμός Quiz 3 : </span>
-          </div>
-          <div>
-            <span>Βαθμός Quiz 4 : </span>
-          </div>
-          <div>
-            <span>Βαθμός Quiz Επαναληπτικό : </span>
-          </div>
-          <div>
-            <span>Μέσος Όρος : </span> 10
+            <span>Βαθμός : </span> 10 <button>Αναλυτική βαθμολογία</button>
+            <ul>
+              <li>
+                <span> Quiz 1 : </span> 10
+              </li>
+              <li>
+                <span> Quiz 2 : </span> 10
+              </li>
+              <li>
+                <span> Quiz 3 : </span> 10
+              </li>
+              <li>
+                <span> Quiz 4 : </span> 10
+              </li>
+              <li>
+                <span> Quiz Επαναληπτικό : </span> 10
+              </li>
+            </ul>
           </div>
         </div>
       </div>
