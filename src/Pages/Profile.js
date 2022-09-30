@@ -1,7 +1,25 @@
 import React from 'react'
+import { useState } from 'react'
 import styles from './Profile.module.css'
+import { FaPencilAlt } from 'react-icons/fa'
+import { BsPersonCircle } from 'react-icons/bs'
+import { IoIosStats } from 'react-icons/io'
+import { MdGrade } from 'react-icons/md'
 
 const Profile = () => {
+  const firstname = 'Flavio'
+  const lastname = 'Dollani'
+  const email = 'flavio.dollani@gmail.com'
+  const totalTests = '0'
+  const totalLessons = '0'
+  const grade = 'A'
+
+  const [grades, setGrades] = useState(true)
+
+  const showGrades = () => setGrades(prev => !prev)
+
+  const expandSign = grades ? '+' : '-'
+
   return (
     <div className={styles.container}>
       <section>
@@ -11,6 +29,7 @@ const Profile = () => {
         <p className={styles.title}>Δες τα στατιστικά σου!</p>
       </section>
       <div className={styles.form_container}>
+        <h1>Log in</h1>
         <form>
           <label htmlFor='firstName'>Όνομα</label>
           <input type='text' id='firstName' placeholder='Βάλε το όνομα σου!' />
@@ -21,51 +40,63 @@ const Profile = () => {
           <label htmlFor='email'>Email</label>
           <input type='email' id='email' placeholder='Βάλε το email σου!' />
 
-          <button>Υποβολή</button>
+          <button type='submit' className={styles.btn}>
+            Υποβολή
+          </button>
         </form>
-        <div>
-          <h2>Προσωπικά Στοιχεία</h2>
-          <div>
-            <span>Όνομα : </span>
-            name
-          </div>
-          <div>
-            <span>Επίθετο : </span>
-            lastname
-          </div>
-          <div>
-            <span>Email : </span>
-            tmp@gmail.com
-          </div>
-          <h2>Στατιστικά</h2>
-          <div>
-            <span>Μαθήματα που έχεις διαβάσει : </span>3
-          </div>
-          <div>
-            <span>Τεστ που έχεις κάνει : </span>5
-          </div>
+      </div>
 
-          <div>
-            <span>Βαθμός : </span> 10 <button>Αναλυτική βαθμολογία</button>
-            <ul>
-              <li>
-                <span> Quiz 1 : </span> 10
-              </li>
-              <li>
-                <span> Quiz 2 : </span> 10
-              </li>
-              <li>
-                <span> Quiz 3 : </span> 10
-              </li>
-              <li>
-                <span> Quiz 4 : </span> 10
-              </li>
-              <li>
-                <span> Quiz Επαναληπτικό : </span> 10
-              </li>
-            </ul>
-          </div>
+      <div className={styles.stats_container}>
+        <div className={styles.info}>
+          <h1>
+            <BsPersonCircle />
+            Προσωπικά Στοιχεία
+          </h1>
+          <span>Όνομα : {firstname}</span>
+          <span>Επίθετο : {lastname}</span>
+          <span>Email : {email}</span>
         </div>
+
+        <div className={styles.info}>
+          <h1>
+            <IoIosStats />
+            Στατιστικά
+          </h1>
+          <span>Μαθήματα που έχεις διαβάσει : {totalLessons} </span>
+          <span>Τεστ που έχεις κάνει : {totalTests}</span>
+        </div>
+
+        <div className={styles.grades}>
+          <h1>
+            <MdGrade />
+            Βαθμός : <span>{grade}</span>
+          </h1>
+          <button type='button' onClick={showGrades} className={styles.btn}>
+            Αναλυτικά {expandSign}
+          </button>
+        </div>
+        <ul hidden={grades}>
+          <li>
+            <FaPencilAlt />
+            Quiz 1 :
+          </li>
+          <li>
+            <FaPencilAlt />
+            Quiz 2 :
+          </li>
+          <li>
+            <FaPencilAlt />
+            Quiz 3 :
+          </li>
+          <li>
+            <FaPencilAlt />
+            Quiz 4 :
+          </li>
+          <li>
+            <FaPencilAlt />
+            Επαναληπτικό :
+          </li>
+        </ul>
       </div>
     </div>
   )
