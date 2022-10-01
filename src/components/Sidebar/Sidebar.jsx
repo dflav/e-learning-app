@@ -18,7 +18,7 @@ const Sidebar = () => {
     closeSidebar()
   }, [location])
 
-  const SidebarMenu = SidebarData.map(item => <SidebarLinks item={item} key={item.id} />)
+  const SidebarMenu = SidebarData.map(item => <SidebarLinks item={item} key={item.id} closed={sidebar} />)
 
   return (
     <>

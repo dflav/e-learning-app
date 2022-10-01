@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './Lesson.module.css'
-import pdfs from '../components/Pdf/PdfData'
 import Pdf from '../components/Pdf/Pdf'
 import { Link } from 'react-router-dom'
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
@@ -32,7 +31,7 @@ const Lesson = ({ id }) => {
           </Link>
         )}
       </div>
-      <Pdf pdf={pdfs[id - 1].pdf} info={pdfs[id - 1].info} id={id} />
+      <Pdf id={id} />
     </div>
   )
 }

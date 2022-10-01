@@ -1,0 +1,41 @@
+.container {
+  max-width: 760px;
+  min-height: 500px;
+  margin: 60px auto;
+  border-radius: 12px;
+  background: #0f70c6;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #e1e9fc;
+}
+
+.container h1 {
+  font-size: 40px;
+}
+
+.container p {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.btn {
+  background-color: #6eb7fb;
+  padding: 1.4rem 2.3rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  border: none;
+  border-radius: 2em;
+  color: #e1e9fc;
+  color: #15171c;
+  font-size: 1em;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background-color: #3d8fe6;
+}
