@@ -7,11 +7,9 @@ const Pdf = ({ id }) => {
   const [pdf, setPdf] = useState(false)
 
   const showPdf = () => setPdf(prev => !prev)
-  console.log('render')
 
   useEffect(() => {
     setPdf(false)
-    console.log('fired')
   }, [id])
 
   return (

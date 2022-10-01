@@ -15,10 +15,14 @@ const DropdownLinks = ({ item, showDropdown }) =>
 const NavLink = ({ item, children }) =>
   item.subNav ? <div className={styles.subMenu}>{children}</div> : <Link to={item.path}>{children}</Link>
 
-const SidebarLinks = ({ item }) => {
+const SidebarLinks = ({ item, sidebar }) => {
   const [dropdown, setDropdown] = useState(false)
 
   const showDropdown = () => setDropdown(prev => !prev)
+
+  useEffect(() => {
+    if (sidebar == false) setDropdown(false)
+  }, [sidebar])
 
   return (
     <>

@@ -9,28 +9,27 @@ import { useLocation } from 'react-router-dom'
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false)
 
-  const openSidebar = () => setSidebar(true)
-  const closeSidebar = () => setSidebar(false)
+  const toggleSidebar = () => setSidebar(prev => !prev)
 
   const location = useLocation()
 
   useEffect(() => {
-    closeSidebar()
+    setSidebar(false)
   }, [location])
 
-  const SidebarMenu = SidebarData.map(item => <SidebarLinks item={item} key={item.id} closed={sidebar} />)
+  const SidebarMenu = SidebarData.map(item => <SidebarLinks item={item} key={item.id} sidebar={sidebar} />)
 
   return (
     <>
       <div className={styles.nav}>
         <div className={styles['nav-icon']}>
-          <HiOutlineMenu onClick={openSidebar} />
+          <HiOutlineMenu onClick={toggleSidebar} />
         </div>
         <span className={styles['nav-title']}>e-Learning</span>
       </div>
       <nav className={`${styles.sidebar} ${!sidebar ? styles.hidden : ''}`}>
         <div className={styles['nav-icon']}>
-          <VscChromeClose onClick={closeSidebar} />
+          <VscChromeClose onClick={toggleSidebar} />
         </div>
         <ul className={styles['nav-links']}>{SidebarMenu}</ul>
       </nav>
