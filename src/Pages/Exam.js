@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './Test.module.css'
+import styles from './Exam.module.css'
 import Quiz from '../components/Quiz/Quiz'
 
-const Test = ({ id }) => {
+const Exam = ({ id }) => {
   return (
     <div className={styles.container}>
       <section>
@@ -16,9 +16,9 @@ const Test = ({ id }) => {
         </p>
       </section>
 
-      <Quiz id={id} />
+      <Quiz id={id} key={id} />
     </div>
   )
 }
 
-export default Test
+export default Exam

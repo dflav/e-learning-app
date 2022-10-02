@@ -21,7 +21,7 @@ const SidebarLinks = ({ item, sidebar }) => {
   const showDropdown = () => setDropdown(prev => !prev)
 
   useEffect(() => {
-    if (sidebar == false) setDropdown(false)
+    if (!sidebar) setDropdown(false)
   }, [sidebar])
 
   return (
