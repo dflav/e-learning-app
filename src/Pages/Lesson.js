@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Lesson.module.css'
 import Pdf from '../components/Pdf/Pdf'
 import { Link } from 'react-router-dom'
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
 
 const Lesson = ({ id }) => {
+  const [lessonsRead, setLessonsRead] = useState(parseInt(localStorage.getItem('lessonNum')) || 0)
+
+  const checkLessonHandler = value => setLessonsRead(prev => prev + value)
+
+  useEffect(() => {
+    localStorage.setItem('lessonNum', lessonsRead)
+  }, [lessonsRead])
+
   return (
     <div className={styles.container}>
       <section>
@@ -31,7 +39,7 @@ const Lesson = ({ id }) => {
           </Link>
         )}
       </div>
-      <Pdf id={id} />
+      <Pdf key={id} id={id} checkLessonHandler={checkLessonHandler} />
     </div>
   )
 }

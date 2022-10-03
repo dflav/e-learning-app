@@ -28,9 +28,10 @@
 
 .form_container {
   background: #b7c6e4;
-  width: 60%;
+  width: 90%;
   min-height: 600px;
   max-width: 1020px;
+  /* min-width: 450px; */
   margin: 60px auto;
   border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -50,7 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
+  width: 70%;
 }
 
 .form_container form label {
@@ -75,6 +76,7 @@
 .btn {
   border: none;
   font-size: 1.1rem;
+  font-weight: 500;
   background: #f4c118;
   margin: 0.7rem 0;
   padding: 0.8rem 2rem;
@@ -82,7 +84,7 @@
   border-radius: 2rem;
   cursor: pointer;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  transition: all 0.4s ease;
+  transition: background 0.4s ease;
   align-self: center;
 }
 
@@ -97,7 +99,7 @@
 }
 
 .stats_container {
-  width: 60%;
+  width: 90%;
   line-height: 1.5;
   background: #b7c6e4;
   max-width: 1020px;
@@ -143,6 +145,13 @@
   border-bottom-right-radius: 12px;
   width: 420px;
 }
+
+.stats_container ul span {
+  color: rgb(216, 54, 81);
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
 .stats_container li {
   padding: 0.4rem 0.8rem;
   display: flex;
@@ -166,7 +175,7 @@
 
 .grades span {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(216, 54, 81);
   margin-left: 0.8rem;
 }

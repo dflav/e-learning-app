@@ -3,21 +3,13 @@ import { useState } from 'react'
 import QuizData from './QuizData'
 import styles from './Quiz.module.css'
 import { useMemo } from 'react'
+import { useEffect } from 'react'
 
 const StartQuiz = ({ id, handleStartQuiz }) => {
   return (
     <>
-      {id !== 5 ? (
-        <>
-          <h1>Κεφάλαιο {id}</h1>
-          <p>Hardware και Software του υπολογιστή</p>
-        </>
-      ) : (
-        <>
-          <h1>Επαναληπτικό</h1>
-          <p> Δοκίμασε τις γνώσεις σου πάνω σε όλα τα κεφάλαια!</p>
-        </>
-      )}
+      {id !== 5 ? <h1>Κεφάλαιο {id}</h1> : <h1>Επαναληπτικό</h1>}
+      <p>{QuizData[id - 1].lesson}</p>
       <button type='button' className={styles.btn} onClick={handleStartQuiz}>
         Ξεκίνα το Quiz!
       </button>
@@ -25,12 +17,16 @@ const StartQuiz = ({ id, handleStartQuiz }) => {
   )
 }
 
-const Quiz = ({ id }) => {
+const Quiz = ({ id, quizTakenHandler }) => {
   const [start, setStart] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [showScore, setShowScore] = useState(false)
   const [score, setScore] = useState(0)
-  const questions = useMemo(() => QuizData[id - 1].questions.sort(() => 0.5 - Math.random()), [])
+  const questions = useMemo(() => QuizData[id - 1].questions.sort(() => 0.5 - Math.random()), [id])
+
+  useEffect(() => {
+    if (start) localStorage.setItem(`quiz ${id}`, score)
+  }, [start, score, id])
 
   const handleStartQuiz = () => setStart(true)
   const handleAnswerButtonClick = isCorrect => {
@@ -43,6 +39,7 @@ const Quiz = ({ id }) => {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
+      quizTakenHandler()
     }
   }
 

@@ -6,6 +6,7 @@
   background: #613ed4;
   margin-top: 60px;
   min-height: calc(100vh - 60px);
+  width: 100%;
   padding-bottom: 60px;
 }
 
@@ -21,7 +22,6 @@
   grid-template-rows: 400px 400px;
   column-gap: 100px;
   row-gap: 100px;
-  /* margin-bottom: 120px; */
 }
 
 .grid-container img {

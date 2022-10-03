@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Exam.module.css'
 import Quiz from '../components/Quiz/Quiz'
 
 const Exam = ({ id }) => {
+  const [quizesTaken, setQuizesTaken] = useState(parseInt(localStorage.getItem('quizNum')) || 0)
+
+  const quizTakenHandler = () => setQuizesTaken(prev => prev + 1)
+
+  useEffect(() => {
+    localStorage.setItem('quizNum', quizesTaken)
+  }, [quizesTaken])
+
   return (
     <div className={styles.container}>
       <section>
@@ -16,7 +24,7 @@ const Exam = ({ id }) => {
         </p>
       </section>
 
-      <Quiz id={id} key={id} />
+      <Quiz id={id} key={id} quizTakenHandler={quizTakenHandler} />
     </div>
   )
 }
