@@ -12,22 +12,22 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.header}>Καλως ήρθες στην εφαρμογή Πληροφορικής Α&#39; Γυμνασίου!</div>
       <div className={styles['grid-container']}>
-        <Link to={'./lessons/IT1'} className={styles.card}>
+        <Link to={'/lessons/IT1'} className={styles.card}>
           <span>Διάβασε κάθε κεφάλαιο στην σελίδα των μαθημάτων!</span>
 
           <img src={book} alt='' />
         </Link>
 
-        <Link to={'./quiz/IT1'} className={styles.card}>
+        <Link to={'/quiz/IT1'} className={styles.card}>
           <span>Κάνε quiz και δοκίμασε την γνώση σου!</span>
 
           <img src={quiz} alt='' />
         </Link>
-        <Link to={'./profile'} className={styles.card}>
+        <Link to={'/profile'} className={styles.card}>
           <span>Δες τα στατιστικά σου! </span>
           <img src={stats} alt='' />
         </Link>
-        <Link to={'./guide'} className={styles.card}>
+        <Link to={'/guide'} className={styles.card}>
           <span>Αν χρειάζεσαι βοήθεια, πήγαινε στο εγχειρίδιο της σελίδας!</span>
           <img src={guide} alt='' />
         </Link>
