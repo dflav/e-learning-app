@@ -15,7 +15,7 @@ const Manual = () => {
     <div className={styles.container}>
       <section>
         <span>
-          <h1>Εχγειρίδιο</h1>
+          <h1>Εγχειρίδιο</h1>
         </span>
         <p className={styles.title}>Βήματα λειτουργιας της εφαρμογής!</p>
       </section>
