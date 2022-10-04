@@ -12,7 +12,7 @@ const App = () => {
     <>
       <Sidebar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/e-learning-app' element={<Home />} />
         <Route path='/lessons/IT1' element={<Lesson id={1} />} />
         <Route path='/lessons/IT2' element={<Lesson id={2} />} />
         <Route path='/lessons/IT3' element={<Lesson id={3} />} />

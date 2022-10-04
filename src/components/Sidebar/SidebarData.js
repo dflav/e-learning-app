@@ -6,7 +6,7 @@ import { AiOutlineInfoCircle, AiOutlineHome } from 'react-icons/ai'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
 
 const SidebarData = [
-  { id: 0, title: 'Home', path: '/', icon: <AiOutlineHome /> },
+  { id: 0, title: 'Home', path: '/e-learning-app', icon: <AiOutlineHome /> },
   {
     id: 1,
     title: 'Μαθήματα',
