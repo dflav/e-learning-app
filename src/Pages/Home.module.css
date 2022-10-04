@@ -51,3 +51,31 @@
 .card a {
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 400px);
+    width: 90%;
+    max-width: 500px;
+    row-gap: 70px;
+  }
+}
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 350px);
+    width: 80%;
+    max-width: 450px;
+    row-gap: 70px;
+  }
+
+  .grid-container img {
+    width: 150px;
+    height: 150px;
+  }
+  .header {
+    line-height: 1.5;
+    margin: 80px 30px;
+  }
+}

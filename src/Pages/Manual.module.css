@@ -1,6 +1,6 @@
 .container {
   margin-top: 60px;
-  background: #ffddeb;
+  background: rgb(254, 214, 221);
   color: #e1e9fc;
   min-height: calc(100vh - 60px);
   padding-bottom: 60px;
@@ -11,17 +11,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ee1c77;
+  background: rgb(207, 77, 99);
   padding: 55px;
 }
 
 .container section h1 {
-  font-size: 65px;
+  font-size: 4rem;
   margin: 15px;
 }
 
 .container .title {
-  font-size: 22px;
+  font-size: 1.4rem;
   text-align: center;
   line-height: 33px;
 }
@@ -33,7 +33,7 @@
   margin: 0 auto;
   margin-top: 60px;
   color: #15171c;
-  width: 60%;
+  width: 90%;
 }
 
 .guide img {
@@ -42,9 +42,19 @@
 }
 
 .guide img:not(:nth-of-type(-n + 2)) {
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
 }
 .guide p {
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media (max-width: 430px) {
+  .container section h1 {
+    font-size: 3.5rem;
+  }
+  .container .title {
+    font-size: 1.3rem;
+  }
 }
