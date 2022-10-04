@@ -13,17 +13,17 @@ const App = () => {
       <Sidebar />
       <Routes>
         <Route path='/e-learning-app' element={<Home />} />
-        <Route path='/lessons/IT1' element={<Lesson id={1} />} />
-        <Route path='/lessons/IT2' element={<Lesson id={2} />} />
-        <Route path='/lessons/IT3' element={<Lesson id={3} />} />
-        <Route path='/lessons/IT4' element={<Lesson id={4} />} />
-        <Route path='/quiz/IT1' element={<Exam id={1} />} />
-        <Route path='/quiz/IT2' element={<Exam id={2} />} />
-        <Route path='/quiz/IT3' element={<Exam id={3} />} />
-        <Route path='/quiz/IT4' element={<Exam id={4} />} />
-        <Route path='/quiz/rev' element={<Exam id={5} />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/guide' element={<Manual />} />
+        <Route path='/e-learning-app/lessons/IT1' element={<Lesson id={1} />} />
+        <Route path='/e-learning-app/lessons/IT2' element={<Lesson id={2} />} />
+        <Route path='/e-learning-app/lessons/IT3' element={<Lesson id={3} />} />
+        <Route path='/e-learning-app/lessons/IT4' element={<Lesson id={4} />} />
+        <Route path='/e-learning-app/quiz/IT1' element={<Exam id={1} />} />
+        <Route path='/e-learning-app/quiz/IT2' element={<Exam id={2} />} />
+        <Route path='/e-learning-app/quiz/IT3' element={<Exam id={3} />} />
+        <Route path='/e-learning-app/quiz/IT4' element={<Exam id={4} />} />
+        <Route path='/e-learning-app/quiz/rev' element={<Exam id={5} />} />
+        <Route path='/e-learning-app/profile' element={<Profile />} />
+        <Route path='/e-learning-app/guide' element={<Manual />} />
       </Routes>
     </>
   )
