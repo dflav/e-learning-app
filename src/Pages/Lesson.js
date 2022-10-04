@@ -23,8 +23,8 @@ const Lesson = ({ id }) => {
         <p className={styles.title}>
           Πληροφορική Α΄ Γυμνασίου
           <br />
-          Ενότητα 2<br />
-          Κεφάλαια 5 - 8
+          Ενότητα 1<br />
+          Κεφάλαια 1 - 4
         </p>
       </section>
       <div className={styles.navigation}>
