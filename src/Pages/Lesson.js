@@ -29,12 +29,12 @@ const Lesson = ({ id }) => {
       </section>
       <div className={styles.navigation}>
         {id !== 1 && (
-          <Link to={`/lessons/IT${id - 1}`} className={styles.btn}>
+          <Link to={`/e-learning-app/lessons/IT${id - 1}`} className={styles.btn}>
             <MdArrowBackIos className={styles.center} />
           </Link>
         )}
         {id !== 4 && (
-          <Link to={`/lessons/IT${id + 1}`} className={styles.btn}>
+          <Link to={`/e-learning-app/lessons/IT${id + 1}`} className={styles.btn}>
             <MdArrowForwardIos />
           </Link>
         )}
