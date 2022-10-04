@@ -1,0 +1,50 @@
+.container {
+  margin-top: 60px;
+  background: #ffddeb;
+  color: #e1e9fc;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 60px;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ee1c77;
+  padding: 55px;
+}
+
+.container section h1 {
+  font-size: 65px;
+  margin: 15px;
+}
+
+.container .title {
+  font-size: 22px;
+  text-align: center;
+  line-height: 33px;
+}
+
+.guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  color: #15171c;
+  width: 60%;
+}
+
+.guide img {
+  margin: 3rem 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.guide img:not(:nth-of-type(-n + 2)) {
+  width: 1000px;
+}
+.guide p {
+  font-size: 1.2rem;
+  text-align: center;
+}
